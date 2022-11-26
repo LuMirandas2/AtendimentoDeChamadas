@@ -48,7 +48,7 @@ function AuthProvider({ children }) {
       });
   }
 
-  async function signIn(email, password, nome) {
+  async function signUp(email, password, nome) {
     setLoadingAuth(true);
     await firebase
       .auth()
