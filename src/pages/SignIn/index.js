@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import "./signIn.css";
 import logo from "../assets/logo.png";
@@ -20,7 +20,7 @@ function SignIn() {
     <div className="container-center">
       <div className="login">
         <div className="login-area">
-          <img src={logo} alt="Sistema Logo"></img>
+          <img src={logo} alt="Sistema Logo" />
         </div>
         <form onSubmit={handleSubmit}>
           <h1>Entrar</h1>
@@ -30,14 +30,12 @@ function SignIn() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
-
           <input
             type="password"
             placeholder="******"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-
           <button type="submit">
             {loadingAuth ? "Carregando..." : "Acessar"}
           </button>
