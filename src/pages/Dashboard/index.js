@@ -49,7 +49,7 @@ export default function Dashboard() {
           cliente: doc.data().cliente,
           clienteId: doc.data().clienteId,
           created: doc.data().created,
-          creratedFormated: format(doc.data().created.toDate(), "dd/MM/yyy"),
+          createdFormated: format(doc.data().created.toDate(), "dd/MM/yyy"),
           status: doc.data().status,
           complemento: doc.data().complemento,
         });

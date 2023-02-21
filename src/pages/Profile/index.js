@@ -1,15 +1,15 @@
 import { useState, useContext } from "react";
-import "./profile.css";
 import Header from "../../components/Header";
 import Title from "../../components/Title";
 import { FiSettings } from "react-icons/fi";
 import avatar from "../assets/avatar.png";
 import { AuthContext } from "../../contexts/auth";
 import firebase from "../../services/firebaseConnection";
+import "./profile.css";
 
 export default function Profile() {
   const { user, signOut, setUser, storageUser } = useContext(AuthContext);
-  const [nome, setNome] = useState(user && user.name);
+  const [nome, setNome] = useState(user && user.nome);
   const [email, setEmail] = useState(user && user.email);
   const [avatarUrl, setAvatarUrl] = useState(user && user.avatarUrl);
   const [imageAvatar, setImageAvatar] = useState(null);
@@ -129,11 +129,11 @@ export default function Profile() {
             <input type="text" value={email} disable={true} />
             <button type="submit">Salvar</button>
           </form>
-          <div className="container">
-            <button className="logout-btn" onClick={() => signOut()}>
-              Sair
-            </button>
-          </div>
+        </div>
+        <div className="container">
+          <button className="logout-btn" onClick={() => signOut()}>
+            Sair
+          </button>
         </div>
       </div>
     </div>
