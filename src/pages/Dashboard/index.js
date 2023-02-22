@@ -3,7 +3,7 @@ import Header from "../../components/Header";
 import Title from "../../components/Title";
 import { FiMessageSquare, FiPlus, FiSearch, FiEdit2 } from "react-icons/fi";
 import { Link } from "react-router-dom";
-import { format } from "date-fins";
+import { format } from "date-fns";
 import firebase from "../../services/firebaseConnection";
 import "./dashboard.css";
 
